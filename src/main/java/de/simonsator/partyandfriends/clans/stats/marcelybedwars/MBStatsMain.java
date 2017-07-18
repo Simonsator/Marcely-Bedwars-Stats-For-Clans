@@ -1,9 +1,9 @@
 package de.simonsator.partyandfriends.clans.stats.marcelybedwars;
 
+import de.simonsator.partyandfriends.api.PAFExtension;
 import de.simonsator.partyandfriends.clan.commands.ClanCommands;
 import de.simonsator.partyandfriends.clan.commands.subcommands.Stats;
 import de.simonsator.partyandfriends.utilities.Language;
-import net.md_5.bungee.api.plugin.Plugin;
 import net.md_5.bungee.config.Configuration;
 
 import java.io.File;
@@ -14,14 +14,14 @@ import java.util.regex.Pattern;
  * @author simonbrungs
  * @version 1.0.0 17.01.17
  */
-public class MBStatsMain extends Plugin {
+public class MBStatsMain extends PAFExtension {
 	private Configuration config;
 	private MBStatsConnection connection;
 	private Configuration messagesConfig;
 
 	public void onEnable() {
 		try {
-			config = (new MBStatsConfig(new File(getDataFolder(), "config.yml"))).getCreatedConfiguration();
+			config = (new MBStatsConfig(new File(getConfigFolder(), "config.yml"))).getCreatedConfiguration();
 			messagesConfig = (new MBStatsMessages(Language.OWN, new File(getDataFolder(), "messages.yml"))).getCreatedConfiguration();
 		} catch (IOException e) {
 			e.printStackTrace();
