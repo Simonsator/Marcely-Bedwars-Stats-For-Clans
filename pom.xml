@@ -30,7 +30,7 @@
 		<dependency>
 			<groupId>de.simonsator</groupId>
 			<artifactId>BungeecordPartyAndFriends</artifactId>
-			<version>1.0.58</version>
+			<version>1.0.61</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
