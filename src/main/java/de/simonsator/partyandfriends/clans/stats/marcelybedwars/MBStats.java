@@ -60,15 +60,13 @@ public class MBStats implements ClanStat {
 			played += data.played;
 			rank += data.rank;
 		}
-		rank = rank / playerData.size();
 		pSender.sendMessage(KILLS_MESSAGE.replaceFirst(kills + ""));
 		pSender.sendMessage(DEATHS_MESSAGE.replaceFirst(deaths + ""));
 		pSender.sendMessage(DESTROYED_MESSAGE.replaceFirst(destroyedBeds + ""));
 		pSender.sendMessage(WINS_MESSAGE.replaceFirst(wins + ""));
 		pSender.sendMessage(DEFEATS_MESSAGE.replaceFirst(defeats + ""));
 		pSender.sendMessage(PLAYED_MESSAGE.replaceFirst(played + ""));
-		pSender.sendMessage(PLAYED_MESSAGE.replaceFirst(played + ""));
-		pSender.sendMessage(RANK_MESSAGE.replaceFirst(played + ""));
+		pSender.sendMessage(RANK_MESSAGE.replaceFirst(rank / playerData.size() + ""));
 	}
 
 	public String getName() {
