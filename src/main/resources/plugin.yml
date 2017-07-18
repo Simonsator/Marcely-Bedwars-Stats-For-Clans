@@ -1,4 +1,4 @@
-name: ModernBedWars-Stats-For-Clans
+name: Marcely-Bedwars-Stats-For-Clans
 version: ${project.version}
 author: Simonsator
 depends: [Clans]
