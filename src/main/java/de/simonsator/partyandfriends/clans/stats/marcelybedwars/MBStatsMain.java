@@ -22,8 +22,8 @@ public class MBStatsMain extends PAFExtension {
 
 	public void onEnable() {
 		try {
-			config = (new MBStatsConfig(new File(getConfigFolder(), "config.yml"))).getCreatedConfiguration();
-			messagesConfig = (new MBStatsMessages(Language.OWN, new File(getDataFolder(), "messages.yml"))).getCreatedConfiguration();
+			config = (new MBStatsConfig(new File(getConfigFolder(), "config.yml"), this)).getCreatedConfiguration();
+			messagesConfig = (new MBStatsMessages(Language.OWN, new File(getDataFolder(), "messages.yml"), this)).getCreatedConfiguration();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

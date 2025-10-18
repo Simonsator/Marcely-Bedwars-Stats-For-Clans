@@ -1,5 +1,6 @@
 package de.simonsator.partyandfriends.clans.stats.marcelybedwars;
 
+import de.simonsator.partyandfriends.api.PAFExtension;
 import de.simonsator.partyandfriends.utilities.Language;
 import de.simonsator.partyandfriends.utilities.LanguageConfiguration;
 
@@ -12,8 +13,8 @@ import java.io.IOException;
  */
 public class MBStatsMessages extends LanguageConfiguration {
 
-	public MBStatsMessages(Language pLanguage, File pFile) throws IOException {
-		super(pLanguage, pFile);
+	public MBStatsMessages(Language pLanguage, File pFile, PAFExtension pPlugin) throws IOException {
+		super(pLanguage, pFile, pPlugin);
 		readFile();
 		loadDefaultValues();
 		saveFile();
@@ -31,7 +32,4 @@ public class MBStatsMessages extends LanguageConfiguration {
 		set("Rank", "&7The average rank of the clan is &a[RANK]&7.");
 	}
 
-	public void reloadConfiguration() throws IOException {
-		configuration = (new MBStatsMessages(Language.OWN, FILE)).getCreatedConfiguration();
-	}
 }
