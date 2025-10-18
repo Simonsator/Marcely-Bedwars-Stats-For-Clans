@@ -30,5 +30,6 @@ public class MBStatsMain extends PAFExtension {
 		MySQLData mySQLData = new MySQLData(config.getString("database.host"), config.getString("database.user"), config.getString("database.password"), config.getInt("database.port"), config.getString("database.db"), "", config.getBoolean("database.use-ssl"));
 		connection = new MBStatsConnection(mySQLData);
 		((Stats) ClanCommands.getInstance().getSubCommand(Stats.class)).registerClanStats(new MBStats(messagesConfig.getString("Name"), connection, Pattern.compile("[KILLS]", Pattern.LITERAL).matcher(messagesConfig.getString("Kills")), Pattern.compile("[WINS]", Pattern.LITERAL).matcher(messagesConfig.getString("Wins")), Pattern.compile("[DEFEATS]", Pattern.LITERAL).matcher(messagesConfig.getString("Defeats")), Pattern.compile("[DEATHS]", Pattern.LITERAL).matcher(messagesConfig.getString("Deaths")), Pattern.compile("[DESTROYED]", Pattern.LITERAL).matcher(messagesConfig.getString("DestroyedBeds")), Pattern.compile("[PLAYED]", Pattern.LITERAL).matcher(messagesConfig.getString("Played")), Pattern.compile("[RANK]", Pattern.LITERAL).matcher(messagesConfig.getString("Rank"))), this);
+		registerAsExtension();
 	}
 }
