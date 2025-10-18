@@ -23,6 +23,7 @@ public class MBStatsConfig extends ConfigurationCreator {
         set("database.db", "minecraft");
         set("database.user", "root");
         set("database.password", "password");
+	    set("database.use-ssl", false);
     }
 
     public void reloadConfiguration() throws IOException {

@@ -3,6 +3,7 @@ package de.simonsator.partyandfriends.clans.stats.marcelybedwars;
 import de.simonsator.partyandfriends.api.PAFExtension;
 import de.simonsator.partyandfriends.clan.commands.ClanCommands;
 import de.simonsator.partyandfriends.clan.commands.subcommands.Stats;
+import de.simonsator.partyandfriends.communication.sql.MySQLData;
 import de.simonsator.partyandfriends.utilities.Language;
 import net.md_5.bungee.config.Configuration;
 
@@ -26,7 +27,8 @@ public class MBStatsMain extends PAFExtension {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		connection = new MBStatsConnection(config.getString("database.db"), "jdbc:mysql://" + config.getString("database.host") + ":" + config.getInt("database.port"), config.getString("database.user"), config.getString("database.password"));
+		MySQLData mySQLData = new MySQLData(config.getString("database.host"), config.getString("database.user"), config.getString("database.password"), config.getInt("database.port"), config.getString("database.db"), "", config.getBoolean("database.use-ssl"));
+		connection = new MBStatsConnection(mySQLData);
 		((Stats) ClanCommands.getInstance().getSubCommand(Stats.class)).registerClanStats(new MBStats(messagesConfig.getString("Name"), connection, Pattern.compile("[KILLS]", Pattern.LITERAL).matcher(messagesConfig.getString("Kills")), Pattern.compile("[WINS]", Pattern.LITERAL).matcher(messagesConfig.getString("Wins")), Pattern.compile("[DEFEATS]", Pattern.LITERAL).matcher(messagesConfig.getString("Defeats")), Pattern.compile("[DEATHS]", Pattern.LITERAL).matcher(messagesConfig.getString("Deaths")), Pattern.compile("[DESTROYED]", Pattern.LITERAL).matcher(messagesConfig.getString("DestroyedBeds")), Pattern.compile("[PLAYED]", Pattern.LITERAL).matcher(messagesConfig.getString("Played")), Pattern.compile("[RANK]", Pattern.LITERAL).matcher(messagesConfig.getString("Rank"))), this);
 	}
 }
