@@ -1,6 +1,7 @@
 name: Marcely-Bedwars-Stats-For-Clans
 version: ${project.version}
 author: Simonsator
-depends: [Clans]
+depends: [ Clans ]
 main: de.simonsator.partyandfriends.clans.stats.marcelybedwars.MBStatsMain
 description: Provides stats for clans for Marcely Bedwars
+api-version: 1.13
