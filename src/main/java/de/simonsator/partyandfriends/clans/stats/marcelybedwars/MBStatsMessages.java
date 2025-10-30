@@ -7,10 +7,6 @@ import de.simonsator.partyandfriends.utilities.LanguageConfiguration;
 import java.io.File;
 import java.io.IOException;
 
-/**
- * @author simonbrungs
- * @version 1.0.0 30.11.16
- */
 public class MBStatsMessages extends LanguageConfiguration {
 
 	public MBStatsMessages(Language pLanguage, File pFile, PAFExtension pPlugin) throws IOException {

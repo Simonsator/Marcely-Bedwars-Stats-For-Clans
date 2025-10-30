@@ -11,10 +11,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.regex.Pattern;
 
-/**
- * @author simonbrungs
- * @version 1.0.0 17.01.17
- */
 public class MBStatsMain extends PAFExtension {
 	private ConfigurationCreator config;
 	private ConfigurationCreator messagesConfig;

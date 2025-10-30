@@ -9,10 +9,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.UUID;
 
-/**
- * @author simonbrungs
- * @version 1.0.0 17.01.17
- */
 public class MBStatsConnection extends SQLCommunication {
 	protected MBStatsConnection(MySQLData pMySQLData) {
 		super(pMySQLData);

@@ -1,9 +1,5 @@
 package de.simonsator.partyandfriends.clans.stats.marcelybedwars;
 
-/**
- * @author simonbrungs
- * @version 1.0.0 30.11.16
- */
 public class PlayerData {
 	public final int wins;
 	public final int deaths;

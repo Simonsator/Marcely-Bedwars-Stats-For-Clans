@@ -6,10 +6,6 @@ import de.simonsator.partyandfriends.utilities.ConfigurationCreator;
 import java.io.File;
 import java.io.IOException;
 
-/**
- * @author simonbrungs
- * @version 1.0.0 30.11.16
- */
 public class MBStatsConfig extends ConfigurationCreator {
 	protected MBStatsConfig(File file, PAFExtension pPlugin) throws IOException {
 		super(file, pPlugin, true);

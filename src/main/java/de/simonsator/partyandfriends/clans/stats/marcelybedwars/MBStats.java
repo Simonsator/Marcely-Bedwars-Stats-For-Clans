@@ -9,10 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 
-/**
- * @author Simonsator
- * @version 1.0.0 17.01.17
- */
 public class MBStats implements ClanStat {
 	private final String NAME;
 	protected final MBStatsConnection CONNECTION;
