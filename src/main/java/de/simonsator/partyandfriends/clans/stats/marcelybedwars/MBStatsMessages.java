@@ -14,7 +14,7 @@ public class MBStatsMessages extends LanguageConfiguration {
 		readFile();
 		loadDefaultValues();
 		saveFile();
-		process(configuration);
+		process();
 	}
 
 	private void loadDefaultValues() {
